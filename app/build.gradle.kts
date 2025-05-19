@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    kotlin("android") version "1.9.10" apply false  
 }
 
 android {
@@ -18,10 +19,10 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = "key0"
-            storeFile = file("pos-keystore")
-            keyPassword = "android"
-            storePassword = "android"
+            keyAlias = "blinkPrinterKey"
+            storeFile = file("C:/keys/blinkprinter.jks")
+            keyPassword = "Good Password"
+            storePassword = "Good Password"
         }
     }
 
@@ -35,17 +36,20 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
+
     buildFeatures {
         aidl = true
     }
 }
 
 dependencies {
-
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

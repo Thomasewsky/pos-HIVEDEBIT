@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">pos printer</string>
+    <string name="app_name">HiveDebit Printer</string>
     <string name="main_ver">Version</string>
     <string name="main_paper_out">Paper out</string>
     <string name="main_text">Print text</string>
